@@ -1,0 +1,53 @@
+:root{
+--glass-bg: rgba(255,255,255,0.05);
+--border: rgba(255,255,255,0.15);
+--glow: rgba(0,255,180,0.4);
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#050507;
+color:white;
+}
+
+.bg-gradient{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, #00ffcc22, transparent),
+radial-gradient(circle at 80% 80%, #00ff8855, transparent);
+z-index:-1;
+filter: blur(80px);
+}
+
+.glass{
+background: var(--glass-bg);
+backdrop-filter: blur(20px);
+border:1px solid var(--border);
+border-radius:20px;
+box-shadow: 0 0 30px rgba(0,255,180,0.1);
+transition:0.4s;
+overflow:hidden;
+position:relative;
+}
+
+.glass:hover{
+box-shadow: 0 0 40px var(--glow);
+transform: translateY(-5px);
+}
+
+.btn{
+padding:12px 25px;
+border-radius:30px;
+border:none;
+background:#00ffc3;
+color:#000;
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
